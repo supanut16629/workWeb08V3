@@ -32,12 +32,12 @@ if($prev == ($numrow/$per_page))
     $next = $next-1;
 
 //prev
-echo "<button onclick=location.href='show_product2.php?page=$prev'> previous </button>";
+echo "<button onclick=location.href='index.php?page=$prev'> previous </button>";
 // paging 1-50 
 for($i=0;$i<ceil($numrow/$per_page);$i++)
-    echo "<a href='show_product2.php?page=$i'>[".($i+1)."]</a>";
+    echo "<a href='index.php?page=$i'>[".($i+1)."]</a>";
 //next
-echo "<button onclick=location.href='show_product2.php?page=$next'> next </button>";
+echo "<button onclick=location.href='index.php?page=$next'> next </button>";
 
 
 $sql="SELECT * FROM product LIMIT $start_page,$per_page";
